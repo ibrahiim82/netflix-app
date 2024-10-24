@@ -9,6 +9,7 @@ import {
   MenuItems,
   Transition,
 } from "@headlessui/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
@@ -44,7 +45,9 @@ const Navbar = () => {
           }`}
         >
           <div className="relative flex items-center justify-between">
-            <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+          <Link href="/">
+              <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+            </Link>
 
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {currentUser && (
@@ -76,36 +79,36 @@ const Navbar = () => {
                 >
                   <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <MenuItem>
-                      <a
+                      <Link
                         href="/register"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Register
-                      </a>
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <a
+                      <Link
                         href="/register"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Login
-                      </a>
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <a
+                      <Link
                         href="/register"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Profile
-                      </a>
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <a
+                      <Link
                         href="/register"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Logout
-                      </a>
+                      </Link>
                     </MenuItem>
                   </MenuItems>
                 </Transition>
