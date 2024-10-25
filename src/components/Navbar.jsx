@@ -45,7 +45,7 @@ const Navbar = () => {
           }`}
         >
           <div className="relative flex items-center justify-between">
-          <Link href="/">
+            <Link href="/">
               <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
             </Link>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                     </MenuItem>
                     <MenuItem>
                       <Link
-                        href="/register"
+                        href="/login"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Login
@@ -96,19 +96,16 @@ const Navbar = () => {
                     </MenuItem>
                     <MenuItem>
                       <Link
-                        href="/register"
+                        href="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                       >
                         Profile
                       </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link
-                        href="/register"
-                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                      >
+                      <span className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                         Logout
-                      </Link>
+                      </span>
                     </MenuItem>
                   </MenuItems>
                 </Transition>
