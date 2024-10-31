@@ -10,9 +10,12 @@ import {
   Transition,
 } from "@headlessui/react";
 import Link from "next/link";
+import { useAuthContext } from "@/context/AuthContext";
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
+
+  const { logOut } = useAuthContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +36,8 @@ const Navbar = () => {
   }, []);
 
   //* with custom hook
-  const currentUser = { displayName: "felix franko" };
+  const { currentUser } = useAuthContext();
+  // const currentUser = { displayName: "felix franko" };
   // const currentUser = false;
 
   return (
@@ -103,7 +107,10 @@ const Navbar = () => {
                       </Link>
                     </MenuItem>
                     <MenuItem>
-                      <span className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                      <span
+                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 cursor-pointer"
+                        onClick={logOut}
+                      >
                         Logout
                       </span>
                     </MenuItem>
