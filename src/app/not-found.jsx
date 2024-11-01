@@ -14,7 +14,7 @@ export default function NotFound() {
         type="button"
         onClick={() => router.back()}
       >
-       Back
+      Go Back
       </button>
     </div>
   );
